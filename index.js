@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb', './lib/shared'],
+  extends: ['eslint-config-airbnb', './lib/shared'].map(require.resolve),
   settings: {
     'import/resolver': {
       node: {
