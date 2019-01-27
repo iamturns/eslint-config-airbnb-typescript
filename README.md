@@ -21,7 +21,7 @@ Within your ESLint config file:
 
 ```js
 module.exports = {
-  extends: ["eslint-config-airbnb-typescript"],
+  extends: ["airbnb-typescript"],
 }
 ```
 
@@ -40,7 +40,7 @@ Within your ESLint config file:
 
 ```js
 module.exports = {
-  extends: ["eslint-config-airbnb-typescript/base"],
+  extends: ["airbnb-typescript/base"],
 }
 ```
 
