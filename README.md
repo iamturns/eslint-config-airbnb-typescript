@@ -6,7 +6,7 @@ Use this when you're trying to mix [eslint-config-airbnb](https://github.com/air
 
 ## I use eslint-config-airbnb (with React support)
 
-Install dependencies (including ESLint plugins):
+Install dependencies. ESLint plugins [must also be installed](https://github.com/eslint/eslint/issues/10125).
 
 ```bash
 npm install eslint-config-airbnb-typescript \
@@ -25,9 +25,15 @@ module.exports = {
 }
 ```
 
+Alter your `eslint` command to include `ts` and `tsx` files:
+
+```bash
+eslint --ext .js,.jsx,.ts,.tsx ./
+```
+
 ## I use eslint-config-airbnb-base (no React support)
 
-Install dependencies (including ESLint plugins):
+Install dependencies. ESLint plugins [must also be installed](https://github.com/eslint/eslint/issues/10125).
 
 ```bash
 npm install eslint-config-airbnb-typescript \
@@ -42,6 +48,12 @@ Within your ESLint config file:
 module.exports = {
   extends: ["airbnb-typescript/base"],
 }
+```
+
+Alter your `eslint` command to include `ts` and `tsx` files:
+
+```bash
+eslint --ext .js,.jsx,.ts,.tsx ./
 ```
 
 ## Additional Documentation
