@@ -4,6 +4,8 @@
 
 Use this when you're trying to mix [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) with [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint).
 
+Note: this config works for both JS and TS files.
+
 ## I use eslint-config-airbnb (with React support)
 
 Install dependencies. ESLint plugins [must also be installed](https://github.com/eslint/eslint/issues/10125).
