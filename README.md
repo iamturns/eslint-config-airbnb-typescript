@@ -8,7 +8,7 @@ Note: this config works for both JS and TS files.
 
 ## I use eslint-config-airbnb (with React support)
 
-Install dependencies. ESLint plugins [must also be installed](https://github.com/eslint/eslint/issues/10125).
+Install dependencies. ESLint plugins [must also be installed](https://github.com/eslint/rfcs/pull/5).
 
 ```bash
 npm install eslint-config-airbnb-typescript \
@@ -35,7 +35,7 @@ eslint --ext .js,.jsx,.ts,.tsx ./
 
 ## I use eslint-config-airbnb-base (no React support)
 
-Install dependencies. ESLint plugins [must also be installed](https://github.com/eslint/eslint/issues/10125).
+Install dependencies. ESLint plugins [must also be installed](https://github.com/eslint/rfcs/pull/5).
 
 ```bash
 npm install eslint-config-airbnb-typescript \
