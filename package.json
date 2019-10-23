@@ -28,7 +28,7 @@
     "eslint-config-airbnb-base": "^14.0.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "2.3.0",
+    "@typescript-eslint/eslint-plugin": "2.5.0",
     "doctoc": "1.4.0",
     "eslint": "6.4.0",
     "eslint-config-prettier": "6.3.0",
