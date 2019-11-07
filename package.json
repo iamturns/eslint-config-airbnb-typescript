@@ -30,7 +30,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "2.5.0",
     "doctoc": "1.4.0",
-    "eslint": "6.5.1",
+    "eslint": "6.6.0",
     "eslint-config-prettier": "6.4.0",
     "eslint-plugin-import": "2.18.2",
     "husky": "3.0.9",
