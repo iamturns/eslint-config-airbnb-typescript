@@ -2,9 +2,7 @@
 
 > Airbnb's ESLint config with TypeScript support
 
-Use this when you're trying to mix [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) with [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint).
-
-Note: this config works for both JS and TS files.
+Works with both JS and TS files.
 
 ## I use eslint-config-airbnb (with React support)
 
@@ -58,6 +56,25 @@ Alter your `eslint` command to include `ts` and `tsx` files:
 ```bash
 eslint --ext .js,.jsx,.ts,.tsx ./
 ```
+
+## I wish this config would support [...]
+
+The goal of `eslint-config-airbnb-typescript` is decorate `eslint-config-airbnb` with TypeScript support. All rules and settings are identical. It's a drop-in replacement for `eslint-config-airbnb`, including linting for JavaScript files.
+
+It's recommended to alter your ESLint config for additional functionality. Here's an example:
+
+```js
+{
+  "extends": [
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+}
+```
+
+My personal ESLint config file with support for Jest, Promises, and Prettier can be found in [create-exposed-app](https://github.com/iamturns/create-exposed-app/blob/master/.eslintrc.js).
 
 ## Additional Documentation
 
