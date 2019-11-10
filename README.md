@@ -67,6 +67,7 @@ It's recommended to alter your ESLint config for additional functionality. Here'
 {
   "extends": [
     "airbnb-typescript",
+    "airbnb/hooks",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking"
