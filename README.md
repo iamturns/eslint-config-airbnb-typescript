@@ -22,8 +22,8 @@ Within your ESLint config file:
 
 ```js
 module.exports = {
-  extends: ["airbnb-typescript"],
-}
+  extends: ['airbnb-typescript'],
+};
 ```
 
 Alter your `eslint` command to include `ts` and `tsx` files:
@@ -47,8 +47,8 @@ Within your ESLint config file:
 
 ```js
 module.exports = {
-  extends: ["airbnb-typescript/base"],
-}
+  extends: ['airbnb-typescript/base'],
+};
 ```
 
 Alter your `eslint` command to include `ts` and `tsx` files:

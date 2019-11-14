@@ -1,5 +1,3 @@
 module.exports = {
-  extends: ["eslint-config-airbnb-base", "./lib/shared.js"].map(
-    require.resolve,
-  ),
-}
+  extends: ['eslint-config-airbnb-base', './lib/shared.js'].map(require.resolve),
+};
