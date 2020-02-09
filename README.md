@@ -23,6 +23,9 @@ Within your ESLint config file:
 ```js
 module.exports = {
   extends: ['airbnb-typescript'],
+  parserOptions: {
+    project: './tsconfig.json',
+  },
 };
 ```
 
@@ -48,6 +51,9 @@ Within your ESLint config file:
 ```js
 module.exports = {
   extends: ['airbnb-typescript/base'],
+  parserOptions: {
+    project: './tsconfig.json',
+  },
 };
 ```
 
