@@ -14,7 +14,7 @@ npm install eslint-config-airbnb-typescript \
             eslint-plugin-jsx-a11y@^6.2.3 \
             eslint-plugin-react@^7.15.1 \
             eslint-plugin-react-hooks@^1.7.0 \
-            @typescript-eslint/eslint-plugin@^2.7.0 \
+            @typescript-eslint/eslint-plugin@^2.19.0 \
             --save-dev
 ```
 
@@ -23,6 +23,9 @@ Within your ESLint config file:
 ```js
 module.exports = {
   extends: ['airbnb-typescript'],
+  parserOptions: {
+    project: './tsconfig.json',
+  },
 };
 ```
 
@@ -39,7 +42,7 @@ Install dependencies. ESLint plugins [must also be installed](https://github.com
 ```bash
 npm install eslint-config-airbnb-typescript \
             eslint-plugin-import@^2.18.2 \
-            @typescript-eslint/eslint-plugin@^2.7.0 \
+            @typescript-eslint/eslint-plugin@^2.19.0 \
             --save-dev
 ```
 
@@ -48,6 +51,9 @@ Within your ESLint config file:
 ```js
 module.exports = {
   extends: ['airbnb-typescript/base'],
+  parserOptions: {
+    project: './tsconfig.json',
+  },
 };
 ```
 
