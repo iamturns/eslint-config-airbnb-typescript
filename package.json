@@ -23,15 +23,15 @@
     "validate": "npm run lint"
   },
   "dependencies": {
-    "@typescript-eslint/parser": "^2.24.0",
+    "@typescript-eslint/parser": "^3.1.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-airbnb-base": "^14.1.0"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.24.0"
+    "@typescript-eslint/eslint-plugin": "^3.1.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "2.27.0",
+    "@typescript-eslint/eslint-plugin": "^3.1.0",
     "doctoc": "1.4.0",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.11.0",
