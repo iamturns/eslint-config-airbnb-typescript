@@ -34,7 +34,7 @@
     "@typescript-eslint/eslint-plugin": "2.27.0",
     "doctoc": "1.4.0",
     "eslint": "6.8.0",
-    "eslint-config-prettier": "6.10.1",
+    "eslint-config-prettier": "6.11.0",
     "eslint-plugin-import": "2.20.2",
     "husky": "4.2.5",
     "lint-staged": "10.2.7",
