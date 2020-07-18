@@ -10,11 +10,11 @@ Install dependencies. ESLint plugins [must also be installed](https://github.com
 
 ```bash
 npm install eslint-config-airbnb-typescript \
-            eslint-plugin-import@^2.20.1 \
-            eslint-plugin-jsx-a11y@^6.2.3 \
-            eslint-plugin-react@^7.19.0 \
-            eslint-plugin-react-hooks@^2.5.0 \
-            @typescript-eslint/eslint-plugin@^3.1.0 \
+            eslint-plugin-import@^2.22.0 \
+            eslint-plugin-jsx-a11y@^6.3.1 \
+            eslint-plugin-react@^7.20.3 \
+            eslint-plugin-react-hooks@^4.0.8 \
+            @typescript-eslint/eslint-plugin@^3.6.1 \
             --save-dev
 ```
 
@@ -41,8 +41,8 @@ Install dependencies. ESLint plugins [must also be installed](https://github.com
 
 ```bash
 npm install eslint-config-airbnb-typescript \
-            eslint-plugin-import@^2.20.1 \
-            @typescript-eslint/eslint-plugin@^3.1.0 \
+            eslint-plugin-import@^2.22.0 \
+            @typescript-eslint/eslint-plugin@^3.6.1 \
             --save-dev
 ```
 
