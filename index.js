@@ -2,14 +2,12 @@
 module.exports = {
   extends: ['eslint-config-airbnb', './lib/shared'].map(require.resolve),
   settings: {
-    // Append 'ts' and 'tsx' extensions to Airbnb 'import/resolver' setting
+    // Append 'ts' extensions to Airbnb 'import/resolver' setting
     'import/resolver': {
       node: {
-        extensions: ['.js', '.ts', '.jsx', '.tsx', '.json'],
+        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx', '.d.ts'],
       },
     },
-    // Append 'ts' and 'tsx' extensions to Airbnb 'import/extensions' setting
-    'import/extensions': ['.js', '.ts', '.mjs', '.jsx', '.tsx'],
   },
   rules: {
     // Append 'tsx' to Airbnb 'react/jsx-filename-extension' rule
