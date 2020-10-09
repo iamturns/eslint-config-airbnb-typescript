@@ -37,7 +37,11 @@ Create a new ESLint config file at the root of your project called `.eslintrc.js
 
 ```js
 module.exports = {
-  extends: ['airbnb-typescript'],
+  extends: [
+    // Chose one or the other
+    'airbnb-typescript', // Delete this line if you do not need React support
+    'airbnb-typescript/base', // Delete this line if you need React support
+  ],
   parserOptions: {
     // ESLint needs to know about the project's TypeScript settings in order for TypeScript-specific
     // things to lint correctly
