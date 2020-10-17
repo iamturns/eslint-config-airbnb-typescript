@@ -4,9 +4,20 @@
 
 Works with both JS and TS files.
 
-## I use eslint-config-airbnb (with React support)
+## Installation
 
-Install dependencies. ESLint plugins [must also be installed](https://github.com/eslint/rfcs/pull/5).
+#### 1) Install Dependences
+
+If you do not need React support (e.g. you use `eslint-config-airbnb-base`), then install the following:
+
+```bash
+npm install eslint-config-airbnb-typescript \
+            eslint-plugin-import@^2.22.0 \
+            @typescript-eslint/eslint-plugin@^4.2.0 \
+            --save-dev
+```
+
+If you need React support (e.g. you use `eslint-config-airbnb`), then install the following:
 
 ```bash
 npm install eslint-config-airbnb-typescript \
@@ -18,49 +29,45 @@ npm install eslint-config-airbnb-typescript \
             --save-dev
 ```
 
-Within your ESLint config file:
+Note that ESLint plugins [must also be installed](https://github.com/eslint/rfcs/pull/5) for this ESLint config to work.
+
+#### 2) Create/Modify Your ESLint Config
+
+Create a new ESLint config file at the root of your project called `.eslintrc.js` (or modify your existing config file).
 
 ```js
 module.exports = {
-  extends: ['airbnb-typescript'],
+  extends: [
+    // Chose one or the other
+    'airbnb-typescript', // Delete this line if you do not need React support
+    'airbnb-typescript/base', // Delete this line if you need React support
+  ],
   parserOptions: {
-    project: './tsconfig.json',
+    // ESLint needs to know about the project's TypeScript settings in order for TypeScript-specific
+    // things to lint correctly
+    // We do not point this at "./tsconfig.json" because certain files (such at this file) should be
+    // linted but not included in the actual project output
+    project: './tsconfig.eslint.json',
   },
 };
 ```
 
-Alter your `eslint` command to include `ts` and `tsx` files:
+#### 3) Create tsconfig.eslint.json
 
-```bash
-eslint --ext .js,.jsx,.ts,.tsx ./
+Create a new file at the root of your project called `tsconfig.eslint.json` that will extend your normal `tsconfig.json`:
+
 ```
+// A special TypeScript project file, used by ESLint only
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    // This part needs to be copy-pasted from from the base tsconfig.json's "include" setting
+    "./src/**/*.ts", // Replace this with something corresponding to your project's directory layout
 
-## I use eslint-config-airbnb-base (no React support)
-
-Install dependencies. ESLint plugins [must also be installed](https://github.com/eslint/rfcs/pull/5).
-
-```bash
-npm install eslint-config-airbnb-typescript \
-            eslint-plugin-import@^2.22.0 \
-            @typescript-eslint/eslint-plugin@^4.2.0 \
-            --save-dev
-```
-
-Within your ESLint config file:
-
-```js
-module.exports = {
-  extends: ['airbnb-typescript/base'],
-  parserOptions: {
-    project: './tsconfig.json',
-  },
-};
-```
-
-Alter your `eslint` command to include `ts` and `tsx` files:
-
-```bash
-eslint --ext .js,.jsx,.ts,.tsx ./
+    // These are ESLint-only inclusions
+    ".eslintrc.js"
+  ]
+}
 ```
 
 ## I wish this config would support [...]
