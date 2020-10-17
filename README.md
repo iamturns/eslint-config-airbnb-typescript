@@ -16,7 +16,7 @@ npm install eslint-config-airbnb-typescript --save-dev
 
 ### 2) Install ESLint plugins
 
-Unfortunately, ESLint plugins used by this config [must also be installed](https://github.com/eslint/rfcs/pull/5).
+ESLint plugins used by this config must also be installed within your project. This is a [limitation within ESLint](https://github.com/eslint/rfcs/pull/5).
 
 ```bash
 npm install eslint-plugin-import@^2.22.0 \
@@ -39,7 +39,7 @@ npm install eslint-plugin-import@^2.22.0 \
 
 Add `"extends": "airbnb-typescript"` to your ESLint config file.
 
-If you don't need React support, extend `airbnb-typescript/base` instead.
+If you don't need React support, add `"extends": "airbnb-typescript/base"` instead.
 
 An example `.eslintrc.js`:
 
@@ -49,7 +49,7 @@ module.exports = {
 };
 ```
 
-### 4) Configure the TypeScript ESLint parser
+### 4) Configure the ESLint TypeScript parser
 
 This config requires knowledge of your TypeScript config.
 
@@ -74,9 +74,9 @@ Open a terminal to the root of your project, and run the following command:
 npx eslint . --ext .js,.jsx,.ts,.tsx
 ```
 
-ESLint will lint all .js, .jsx, .ts, and .tsx files within the current folder, and will output the results to your terminal.
+ESLint will lint all .js, .jsx, .ts, and .tsx files within the current folder, and output results to your terminal.
 
-You can also get results in realtime inside most IDEs via a plugin - just search your IDE's extension store.
+You can also get results in realtime inside most IDEs via a plugin.
 
 ## FAQ
 
@@ -84,7 +84,7 @@ You can also get results in realtime inside most IDEs via a plugin - just search
 
 This means you are attempting to lint a file that `tsconfig.json` doesn't include.
 
-A common fix is to create a `tsconfig.eslint.json` file, which extends from your `tsconfig.json` file, and includes all the files you are linting.
+A common fix is to create a `tsconfig.eslint.json` file, which extends your `tsconfig.json` file and includes all files you are linting.
 
 ```json
 {
@@ -138,7 +138,7 @@ My personal ESLint config file with support for Jest, Promises, and Prettier can
 
 Authored and maintained by Matt Turnbull ([iamturns.com](https://iamturns.com) / [@iamturns](https://twitter.com/iamturns))
 
-To all [contributors](https://github.com/iamturns/eslint-config-airbnb-typescript/graphs/contributors) (if you exist) - thank you!
+A big thank you to all [contributors](https://github.com/iamturns/eslint-config-airbnb-typescript/graphs/contributors)!
 
 ## License
 
