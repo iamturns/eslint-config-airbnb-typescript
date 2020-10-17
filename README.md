@@ -2,9 +2,7 @@
 
 [![Version](https://img.shields.io/npm/v/eslint-config-airbnb-typescript.svg?style=flat-square)](https://www.npmjs.com/package/eslint-config-airbnb-typescript?activeTab=versions) [![Downloads](https://img.shields.io/npm/dt/eslint-config-airbnb-typescript.svg?style=flat-square)](https://www.npmjs.com/package/eslint-config-airbnb-typescript) [![Last commit](https://img.shields.io/github/last-commit/iamturns/eslint-config-airbnb-typescript.svg?style=flat-square)](https://github.com/iamturns/eslint-config-airbnb-typescript/graphs/commit-activity) [![Build](https://img.shields.io/circleci/project/github/iamturns/eslint-config-airbnb-typescript/master.svg?style=flat-square)](https://circleci.com/gh/iamturns/eslint-config-airbnb-typescript) [![License](https://img.shields.io/github/license/iamturns/eslint-config-airbnb-typescript.svg?style=flat-square)](https://github.com/iamturns/eslint-config-airbnb-typescript/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/iamturns/eslint-config-airbnb-typescript/blob/master/CONTRIBUTING.md) [![Code of conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/iamturns/eslint-config-airbnb-typescript/blob/master/CODE_OF_CONDUCT.md)
 
-> Airbnb's ESLint config with TypeScript support
-
-Works with both JS and TS files.
+Airbnb's ESLint config with TypeScript support
 
 ## Setup
 
@@ -80,6 +78,10 @@ You can also get results in realtime inside most IDEs via a plugin.
 
 ## FAQ
 
+### Does this work with JavaScript files too?
+
+Yep! This config is a drop-in replacement for `eslint-config-airbnb`, decorating it with TypeScript support.
+
 ### I get this error when running ESLint: "The file must be included in at least one of the projects provided"
 
 This means you are attempting to lint a file that `tsconfig.json` doesn't include.
@@ -108,11 +110,7 @@ This is a known problem. Some suggestions exist in this [GitHub issue](https://g
 
 ### I wish this config would support [...]
 
-The goal of `eslint-config-airbnb-typescript` is to simply decorate `eslint-config-airbnb` with TypeScript support. All rules and settings are identical. It's a drop-in replacement for `eslint-config-airbnb`, including linting for JavaScript files.
-
-It's not a single config to cater for all TypeScript linting requirements.
-
-For additional functionality, alter your ESLint config file. For example:
+The goal of `eslint-config-airbnb-typescript` is to simply decorate `eslint-config-airbnb` with TypeScript support. It's not a single config to cater for all TypeScript linting requirements. For additional functionality, alter your ESLint config file. For example:
 
 ```js
 module.exports = {
