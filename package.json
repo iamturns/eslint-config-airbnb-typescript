@@ -22,7 +22,7 @@
     "validate": "npm run lint"
   },
   "dependencies": {
-    "@typescript-eslint/parser": "4.2.0",
+    "@typescript-eslint/parser": "4.4.1",
     "eslint-config-airbnb": "18.2.0",
     "eslint-config-airbnb-base": "14.2.0"
   },
