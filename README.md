@@ -21,7 +21,7 @@ npm install eslint-plugin-import@^2.22.0 \
             eslint-plugin-jsx-a11y@^6.3.1 \
             eslint-plugin-react@^7.20.3 \
             eslint-plugin-react-hooks@^4.0.8 \
-            @typescript-eslint/eslint-plugin@^4.2.0 \
+            @typescript-eslint/eslint-plugin@^4.4.1 \
             --save-dev
 ```
 
@@ -29,7 +29,7 @@ If you don't need React support:
 
 ```bash
 npm install eslint-plugin-import@^2.22.0 \
-            @typescript-eslint/eslint-plugin@^4.2.0 \
+            @typescript-eslint/eslint-plugin@^4.4.1 \
             --save-dev
 ```
 
