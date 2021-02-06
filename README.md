@@ -14,7 +14,7 @@ npm install eslint-config-airbnb-typescript --save-dev
 
 ### 2) Install ESLint plugins
 
-ESLint plugins used by this config must also be installed within your project. This is a [limitation within ESLint](https://github.com/eslint/rfcs/pull/5).
+ESLint plugins used by this config must also be installed within your project. This is a limitation within ESLint (see [RFC](https://github.com/eslint/rfcs/tree/master/designs/2019-config-simplification) and [progress](https://github.com/eslint/eslint/issues/13481)).
 
 ```bash
 npm install eslint-plugin-import@^2.22.0 \
