@@ -1,3 +1,14 @@
 {
-  "extends": ["config:base"]
+  "extends": ["config:base"],
+  "packageRules": [
+    // Do not pin dependencies, see https://github.com/iamturns/eslint-config-airbnb-typescript/issues/158#issuecomment-774405198
+    {
+      "packageNames": [
+        "@typescript-eslint/parser",
+        "eslint-config-airbnb",
+        "eslint-config-airbnb-base"
+      ],
+      "rangeStrategy": "replace"
+    }
+  ]
 }
