@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "4.4.1",
-    "doctoc": "1.4.0",
+    "doctoc": "2.0.0",
     "eslint": "7.11.0",
     "eslint-config-prettier": "6.13.0",
     "eslint-plugin-import": "2.22.1",
