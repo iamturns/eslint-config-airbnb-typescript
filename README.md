@@ -8,42 +8,53 @@ Airbnb's ESLint config with TypeScript support
 
 ### 1) Install
 
-```
-npm install eslint-config-airbnb-typescript --save-dev
-```
+#### typescript
 
-### 2) Install ESLint plugins
-
-ESLint plugins used by this config must also be installed within your project. This is a limitation within ESLint (see [RFC](https://github.com/eslint/rfcs/tree/master/designs/2019-config-simplification) and [progress](https://github.com/eslint/eslint/issues/13481)).
+if you don't have typescript installed, install it
 
 ```bash
-npm install eslint-plugin-import@^2.22.0 \
-            eslint-plugin-jsx-a11y@^6.3.1 \
-            eslint-plugin-react@^7.20.3 \
-            eslint-plugin-react-hooks@^4.0.8 \
-            @typescript-eslint/eslint-plugin@^4.4.1 \
-            --save-dev
+npm install typescript
 ```
 
-If you don't need React support:
+make sure you have a tsconfig.json that includes the files you want to lint or look further down if you want to create a separate tsconfig for defining which files to lint.
+
+#### eslint-config-airbnb
+
+If you want to lint React features then use together with `eslint-config-airbnb`. Before installing you'll need to install all peerDependencies `eslint-config-airbnb`
 
 ```bash
-npm install eslint-plugin-import@^2.22.0 \
-            @typescript-eslint/eslint-plugin@^4.4.1 \
-            --save-dev
+npx install-peerdeps --dev eslint-config-airbnb
+npm install eslint-config-airbnb eslint-config-airbnb-typescript --save-dev
 ```
 
-### 3) Configure ESLint
+#### eslint-config-airbnb-base
 
-Add `"extends": "airbnb-typescript"` to your ESLint config file.
+If you want to lint without React support then install together with `eslint-config-airbnb-base`. Before installing you'll need to install all peerDependencies `eslint-config-airbnb-base`.
 
-If you don't need React support, add `"extends": "airbnb-typescript/base"` instead.
+```bash
+npx install-peerdeps --dev eslint-config-airbnb-base
+npm install eslint-config-airbnb-base eslint-config-airbnb-typescript --save-dev
+```
+
+### 2) Configure ESLint
+
+Add `"extends": ["airbnb", "airbnb-typescript"]` to your ESLint config file.
+
+If you don't need React support, add `"extends": ["airbnb-base", "airbnb-typescript/base"]` instead.
 
 An example `.eslintrc.js`:
 
 ```js
 module.exports = {
-  extends: ['airbnb-typescript'],
+  extends: ['airbnb', 'airbnb-typescript'],
+};
+```
+
+or for base
+
+```js
+module.exports = {
+  extends: ['airbnb-base', 'airbnb-typescript/base'],
 };
 ```
 
@@ -57,18 +68,18 @@ For example:
 
 ```diff
  module.exports = {
-   extends: ['airbnb-typescript'],
+   extends: ['airbnb', 'airbnb-typescript'],
 +  parserOptions: {
 +    project: './tsconfig.json',
 + }
  };
 ```
 
-### 5) Run ESLint
+### 4) Run ESLint
 
 Open a terminal to the root of your project, and run the following command:
 
-```
+```bash
 npx eslint . --ext .js,.jsx,.ts,.tsx
 ```
 
@@ -80,7 +91,7 @@ You can also get results in realtime inside most IDEs via a plugin.
 
 ### Does this work with JavaScript files too?
 
-Yep! This config is a drop-in replacement for `eslint-config-airbnb`, decorating it with TypeScript support.
+Yep! This config is just decorating `eslint-config-airbnb` or `eslint-config-airbnb-base` with TypeScript support.
 
 ### I get this error when running ESLint: "The file must be included in at least one of the projects provided"
 
@@ -104,10 +115,6 @@ parserOptions: {
 }
 ```
 
-### I get peer dependency warnings for ESLint React plugins, but I'm using `airbnb-typescript/base`
-
-This is a known problem. Some suggestions exist in this [GitHub issue](https://github.com/iamturns/eslint-config-airbnb-typescript/issues/6).
-
 ### I wish this config would support [...]
 
 The goal of `eslint-config-airbnb-typescript` is to simply decorate `eslint-config-airbnb` with TypeScript support. It's not a single config to cater for all TypeScript linting requirements. For additional functionality, alter your ESLint config file. For example:
@@ -115,6 +122,7 @@ The goal of `eslint-config-airbnb-typescript` is to simply decorate `eslint-conf
 ```js
 module.exports = {
   extends: [
+    'airbnb',
     'airbnb-typescript',
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',

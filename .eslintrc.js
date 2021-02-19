@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['./base.js', 'prettier', 'prettier/@typescript-eslint'],
+  extends: ['airbnb-base', './base.js', 'prettier'],
   parserOptions: {
     project: './tsconfig.json',
   },
