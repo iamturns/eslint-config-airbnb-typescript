@@ -1,5 +1,6 @@
 {
   "name": "eslint-config-airbnb-typescript",
+  "version": "0.0.0-development",
   "description": "Airbnb's ESLint config with TypeScript support",
   "license": "MIT",
   "author": "Matt Turnbull <matt@iamturns.com> (https://iamturns.com)",
@@ -11,7 +12,6 @@
   "bugs": {
     "url": "https://github.com/iamturns/eslint-config-airbnb-typescript/issues"
   },
-  "version": "0.0.0-development",
   "scripts": {
     "pre-commit": "lint-staged",
     "format": "run-s format:package format:prettier format:eslint",
@@ -19,6 +19,7 @@
     "format:package": "prettier-package-json --write",
     "format:prettier": "prettier --write \"**/*.{js,json,md,yml}\" \".editorconfig\" \"LICENSE\"",
     "lint": "eslint ./",
+    "prepare": "husky install",
     "validate": "npm run lint"
   },
   "peerDependencies": {
@@ -32,7 +33,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "2.24.1",
-    "husky": "4.3.8",
+    "husky": "7.0.1",
     "lint-staged": "11.1.2",
     "npm-run-all": "4.1.5",
     "prettier": "2.3.1",
