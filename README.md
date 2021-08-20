@@ -2,49 +2,41 @@
 
 [![Version](https://img.shields.io/npm/v/eslint-config-airbnb-typescript.svg?style=flat-square)](https://www.npmjs.com/package/eslint-config-airbnb-typescript?activeTab=versions) [![Downloads](https://img.shields.io/npm/dt/eslint-config-airbnb-typescript.svg?style=flat-square)](https://www.npmjs.com/package/eslint-config-airbnb-typescript) [![Last commit](https://img.shields.io/github/last-commit/iamturns/eslint-config-airbnb-typescript.svg?style=flat-square)](https://github.com/iamturns/eslint-config-airbnb-typescript/graphs/commit-activity) [![Build](https://img.shields.io/circleci/project/github/iamturns/eslint-config-airbnb-typescript/master.svg?style=flat-square)](https://circleci.com/gh/iamturns/eslint-config-airbnb-typescript) [![License](https://img.shields.io/github/license/iamturns/eslint-config-airbnb-typescript.svg?style=flat-square)](https://github.com/iamturns/eslint-config-airbnb-typescript/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/iamturns/eslint-config-airbnb-typescript/blob/master/CONTRIBUTING.md) [![Code of conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/iamturns/eslint-config-airbnb-typescript/blob/master/CODE_OF_CONDUCT.md)
 
-Airbnb's ESLint config with TypeScript support
+Enhances Airbnb's ESLint config with TypeScript support
 
 ## Setup
 
-### 1) Install
+### 1) Setup regular Airbnb config
 
-```
-npm install eslint-config-airbnb-typescript --save-dev
-```
+Make sure you have the regular Airbnb config setup. See [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb), or [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base) if you're not using React.
 
-### 2) Install ESLint plugins
-
-ESLint plugins used by this config must also be installed within your project. This is a limitation within ESLint (see [RFC](https://github.com/eslint/rfcs/tree/master/designs/2019-config-simplification) and [progress](https://github.com/eslint/eslint/issues/13481)).
+### 2) Install this config (and peer dependencies)
 
 ```bash
-npm install eslint-plugin-import@^2.22.0 \
-            eslint-plugin-jsx-a11y@^6.3.1 \
-            eslint-plugin-react@^7.20.3 \
-            eslint-plugin-react-hooks@^4.0.8 \
-            @typescript-eslint/eslint-plugin@^4.4.1 \
-            --save-dev
-```
-
-If you don't need React support:
-
-```bash
-npm install eslint-plugin-import@^2.22.0 \
-            @typescript-eslint/eslint-plugin@^4.4.1 \
+npm install eslint-config-airbnb-typescript \
+            @typescript-eslint/eslint-plugin \
+            @typescript-eslint/parser \
             --save-dev
 ```
 
 ### 3) Configure ESLint
 
-Add `"extends": "airbnb-typescript"` to your ESLint config file.
+Within your ESLint config file:
 
-If you don't need React support, add `"extends": "airbnb-typescript/base"` instead.
+```diff
+extends: [
+  'airbnb',
++ 'airbnb-typescript'
+]
+```
 
-An example `.eslintrc.js`:
+If you don't need React support:
 
-```js
-module.exports = {
-  extends: ['airbnb-typescript'],
-};
+```diff
+extends: [
+  'airbnb-base',
++ 'airbnb-typescript/base'
+]
 ```
 
 ### 4) Configure the ESLint TypeScript parser
@@ -56,12 +48,12 @@ In your ESLint config, set [parserOptions.project](https://github.com/typescript
 For example:
 
 ```diff
- module.exports = {
-   extends: ['airbnb-typescript'],
-+  parserOptions: {
-+    project: './tsconfig.json',
+{
+  extends: ['airbnb', 'airbnb-typescript'],
++ parserOptions: {
++   project: './tsconfig.json'
 + }
- };
+}
 ```
 
 ### 5) Run ESLint
@@ -77,10 +69,6 @@ ESLint will lint all .js, .jsx, .ts, and .tsx files within the current folder, a
 You can also get results in realtime inside most IDEs via a plugin.
 
 ## FAQ
-
-### Does this work with JavaScript files too?
-
-Yep! This config is a drop-in replacement for `eslint-config-airbnb`, decorating it with TypeScript support.
 
 ### I get this error when running ESLint: "The file must be included in at least one of the projects provided"
 
@@ -104,17 +92,20 @@ parserOptions: {
 }
 ```
 
-### I get peer dependency warnings for ESLint React plugins, but I'm using `airbnb-typescript/base`
+### Why do I need the peer dependencies?
 
-This is a known problem. Some suggestions exist in this [GitHub issue](https://github.com/iamturns/eslint-config-airbnb-typescript/issues/6).
+`@typescript-eslint/eslint-plugin` is a peer dependency because of a limitation within ESLint. See [issue](https://github.com/eslint/eslint/issues/3458), [RFC](https://github.com/eslint/rfcs/tree/master/designs/2019-config-simplification), and [progress](https://github.com/eslint/eslint/issues/13481).
+
+`@typescript-eslint/parser` is a peer dependency because the version number must match `@typescript-eslint/eslint-plugin`.
 
 ### I wish this config would support [...]
 
-The goal of `eslint-config-airbnb-typescript` is to simply decorate `eslint-config-airbnb` with TypeScript support. It's not a single config to cater for all TypeScript linting requirements. For additional functionality, alter your ESLint config file. For example:
+This config simply enhances the Airbnb with TypeScript support. It's not a single config to cater for all TypeScript linting requirements. For additional functionality, alter your ESLint config file. For example:
 
 ```js
 module.exports = {
   extends: [
+    'airbnb',
     'airbnb-typescript',
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
