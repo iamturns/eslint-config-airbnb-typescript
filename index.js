@@ -1,6 +1,6 @@
 // This file adds some React specific settings. Not using React? Use base.js instead.
 module.exports = {
-  extends: ['eslint-config-airbnb', './lib/shared'].map(require.resolve),
+  extends: ['./lib/shared'].map(require.resolve),
   settings: {
     // Append 'ts' extensions to Airbnb 'import/resolver' setting
     'import/resolver': {
