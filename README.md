@@ -14,8 +14,8 @@ Make sure you have the regular Airbnb config setup. See [eslint-config-airbnb](h
 
 ```bash
 npm install eslint-config-airbnb-typescript \
-            @typescript-eslint/eslint-plugin@^4.4.1 \
-            @typescript-eslint/parser@^4.4.1 \
+            @typescript-eslint/eslint-plugin@^4.29.3 \
+            @typescript-eslint/parser@^4.29.3 \
             --save-dev
 ```
 
