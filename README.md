@@ -10,26 +10,12 @@ Enhances Airbnb's ESLint config with TypeScript support
 
 Make sure you have the regular Airbnb config setup. See [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb), or [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base) if you're not using React.
 
-### 2) Install dependencies
+### 2) Install dependencies (and peer dependencies)
 
 ```bash
 npm install eslint-config-airbnb-typescript \
             @typescript-eslint/eslint-plugin@^4.4.1 \
             @typescript-eslint/parser@^4.4.1 \
-            eslint-plugin-import@^2.22.0 \
-            eslint-plugin-jsx-a11y@^6.3.1 \
-            eslint-plugin-react@^7.20.3 \
-            eslint-plugin-react-hooks@^4.0.8 \
-            --save-dev
-```
-
-If you don't need React support:
-
-```bash
-npm install eslint-config-airbnb-typescript \
-            @typescript-eslint/eslint-plugin@^4.4.1 \
-            @typescript-eslint/parser@^4.4.1 \
-            eslint-plugin-import@^2.22.0 \
             --save-dev
 ```
 
@@ -108,7 +94,7 @@ parserOptions: {
 
 ### Why do I need the peer dependencies?
 
-The ESLint plugins are peer dependencies due to a limitation within ESLint. See [issue](https://github.com/eslint/eslint/issues/3458), [RFC](https://github.com/eslint/rfcs/tree/master/designs/2019-config-simplification), and [progress](https://github.com/eslint/eslint/issues/13481).
+`@typescript-eslint/eslint-plugin` is a peer dependency due to a limitation within ESLint. See [issue](https://github.com/eslint/eslint/issues/3458), [RFC](https://github.com/eslint/rfcs/tree/master/designs/2019-config-simplification), and [progress](https://github.com/eslint/eslint/issues/13481).
 
 `@typescript-eslint/parser` is a peer dependency because the version number must match `@typescript-eslint/eslint-plugin`.
 
