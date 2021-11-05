@@ -1,9 +1,3 @@
 {
-  "extends": ["config:base"],
-  "packageRules": [
-    {
-      "packageNames": ["@typescript-eslint/eslint-plugin", "@typescript-eslint/parser"],
-      "rangeStrategy": "replace"
-    }
-  ]
+  "extends": ["config:js-lib"]
 }
