@@ -26,11 +26,11 @@
     "eslint-config-airbnb-base": "^14.2.1"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.29.3",
-    "@typescript-eslint/parser": "^4.29.3"
+    "@typescript-eslint/eslint-plugin": "^4.29.3 || ^5.0.0",
+    "@typescript-eslint/parser": "^4.29.3 || ^5.0.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "4.33.0",
+    "@typescript-eslint/eslint-plugin": "5.3.0",
     "doctoc": "2.1.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
