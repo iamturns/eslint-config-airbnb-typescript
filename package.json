@@ -32,8 +32,8 @@
     "eslint-plugin-import": "^2.25.3"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "5.4.0",
-    "@typescript-eslint/parser": "5.4.0",
+    "@typescript-eslint/eslint-plugin": "5.15.0",
+    "@typescript-eslint/parser": "5.15.0",
     "doctoc": "2.1.0",
     "eslint": "8.2.0",
     "eslint-config-prettier": "8.5.0",
