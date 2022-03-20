@@ -116,6 +116,18 @@ module.exports = {
 
 My personal ESLint config file with support for Jest, Promises, and Prettier can be found in [create-exposed-app](https://github.com/iamturns/create-exposed-app/blob/master/.eslintrc.js).
 
+### Why is `import/no-unresolved` disabled?
+
+Two reasons:
+
+1. It requires additional configuration, which may be different for monorepo's, webpack usage, etc
+2. The rule offers little value in a TypeScript world, as the TypeScript compiler will catch these errors
+
+If you would like to enable this rule, then:
+
+- Enable the rule within your config: `'import/no-unresolved': 'error'`
+- Install and configure the TypeScript import resolver: [eslint-import-resolver-typescript](https://www.npmjs.com/package/eslint-import-resolver-typescript)
+
 ## Additional Documentation
 
 - [CHANGELOG.md](CHANGELOG.md)
