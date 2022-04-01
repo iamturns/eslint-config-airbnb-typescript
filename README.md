@@ -8,7 +8,7 @@ Enhances Airbnb's ESLint config with TypeScript support
 
 ### 1) Setup regular Airbnb config
 
-Make sure you have the regular Airbnb config setup. See [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb), or [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base) if you're not using React.
+Make sure you have the regular Airbnb config setup. If you are using React, use [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb), or if you aren't using React, use [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base).
 
 ### 2) Install dependencies (and peer dependencies)
 
