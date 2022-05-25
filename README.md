@@ -12,11 +12,17 @@ Make sure you have the regular Airbnb config setup. If you are using React, use 
 
 ### 2) Install dependencies (and peer dependencies)
 
+npm:
 ```bash
 npm install eslint-config-airbnb-typescript \
             @typescript-eslint/eslint-plugin@^5.13.0 \
             @typescript-eslint/parser@^5.0.0 \
             --save-dev
+```
+
+yarn:
+```bash
+yarn add -D eslint-config-airbnb-typescript @typescript-eslint/eslint-plugin@^5.13.0 @typescript-eslint/parser@^5.0.0
 ```
 
 ### 3) Configure ESLint
