@@ -13,12 +13,12 @@
     "url": "https://github.com/iamturns/eslint-config-airbnb-typescript/issues"
   },
   "scripts": {
-    "pre-commit": "lint-staged",
     "format": "run-s format:package format:prettier format:eslint",
-    "format:eslint": "eslint --fix ./ >/dev/null 2>&1 || true",
+    "format:eslint": "eslint --fix ./",
     "format:package": "prettier-package-json --write",
     "format:prettier": "prettier --write \"**/*.{js,json,md,yml}\" \".editorconfig\" \"LICENSE\"",
     "lint": "eslint ./",
+    "pre-commit": "lint-staged",
     "prepare": "husky install",
     "validate": "npm run lint"
   },
@@ -26,24 +26,24 @@
     "eslint-config-airbnb-base": "^15.0.0"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.13.0",
-    "@typescript-eslint/parser": "^5.0.0",
-    "eslint": "^7.32.0 || ^8.2.0",
-    "eslint-plugin-import": "^2.25.3"
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
+    "eslint": "*",
+    "eslint-plugin-import": "^2.27.5"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "5.15.0",
-    "@typescript-eslint/parser": "5.15.0",
-    "doctoc": "2.1.0",
-    "eslint": "8.11.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-import": "2.25.4",
-    "husky": "7.0.4",
-    "lint-staged": "12.3.7",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
+    "doctoc": "^2.2.1",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "npm-run-all": "4.1.5",
-    "prettier": "2.6.0",
-    "prettier-package-json": "2.6.3",
-    "typescript": "4.6.2"
+    "prettier": "^2.8.8",
+    "prettier-package-json": "^2.8.0",
+    "typescript": "*"
   },
   "keywords": [
     "airbnb",
