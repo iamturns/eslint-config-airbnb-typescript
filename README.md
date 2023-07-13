@@ -14,6 +14,15 @@ Make sure you have the regular Airbnb config setup. If you are using React, use 
 
 ```bash
 npm install eslint-config-airbnb-typescript \
+            @typescript-eslint/eslint-plugin@^6.0.0 \
+            @typescript-eslint/parser@^6.0.0 \
+            --save-dev
+```
+
+or
+
+```bash
+npm install eslint-config-airbnb-typescript \
             @typescript-eslint/eslint-plugin@^5.13.0 \
             @typescript-eslint/parser@^5.0.0 \
             --save-dev
@@ -108,8 +117,10 @@ module.exports = {
     'airbnb',
     'airbnb-typescript',
     'airbnb/hooks',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:@typescript-eslint/recommended-type-checked', // @typescript-eslint @v6
+    'plugin:@typescript-eslint/stylistic-type-checked', // @typescript-eslint @v6
+    // 'plugin:@typescript-eslint/recommended',                          // @typescript-eslint @v5
+    // 'plugin:@typescript-eslint/recommended-requiring-type-checking',  // @typescript-eslint @v5
   ],
 };
 ```

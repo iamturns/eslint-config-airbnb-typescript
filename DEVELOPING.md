@@ -2,7 +2,7 @@
 
 ## Introduction
 
-### How do I setup the the project?
+### How do I setup the project?
 
 1. Fork the repo
 1. Install dependencies: `npm install`
