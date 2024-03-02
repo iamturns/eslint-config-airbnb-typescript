@@ -38,7 +38,7 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.25.4",
     "husky": "7.0.4",
-    "lint-staged": "12.3.7",
+    "lint-staged": "12.5.0",
     "npm-run-all2": "5.0.0",
     "prettier": "2.8.8",
     "prettier-package-json": "2.6.3",
