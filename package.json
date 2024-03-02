@@ -19,7 +19,7 @@
     "format:package": "prettier-package-json --write",
     "format:prettier": "prettier --write \"**/*.{js,json,md,yml}\" \".editorconfig\" \"LICENSE\"",
     "lint": "eslint ./",
-    "prepare": "husky install",
+    "prepare": "husky",
     "validate": "npm run lint"
   },
   "dependencies": {
