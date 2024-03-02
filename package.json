@@ -41,7 +41,7 @@
     "lint-staged": "12.5.0",
     "npm-run-all2": "5.0.0",
     "prettier": "2.8.8",
-    "prettier-package-json": "2.6.3",
+    "prettier-package-json": "2.8.0",
     "typescript": "5.3.3"
   },
   "keywords": [
