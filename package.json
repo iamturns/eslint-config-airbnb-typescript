@@ -13,12 +13,12 @@
     "url": "https://github.com/iamturns/eslint-config-airbnb-typescript/issues"
   },
   "scripts": {
-    "pre-commit": "lint-staged",
     "format": "run-s format:package format:prettier format:eslint",
     "format:eslint": "eslint --fix ./ >/dev/null 2>&1 || true",
     "format:package": "prettier-package-json --write",
     "format:prettier": "prettier --write \"**/*.{js,json,md,yml}\" \".editorconfig\" \"LICENSE\"",
     "lint": "eslint ./",
+    "pre-commit": "lint-staged",
     "prepare": "husky",
     "validate": "npm run lint"
   },
@@ -26,13 +26,13 @@
     "eslint-config-airbnb-base": "^15.0.0"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "@typescript-eslint/parser": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^8.56.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "7.1.0",
-    "@typescript-eslint/parser": "7.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "doctoc": "2.2.1",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
