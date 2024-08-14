@@ -4,6 +4,17 @@
 
 Enhances Airbnb's ESLint config with TypeScript support
 
+> [!IMPORTANT]
+> ## This repo has been archived
+>
+> After six years and reaching 2 million weekly downloads, I can no longer give this project the attention it deserves.
+> 
+> Please fork this repo and carry it forward! I'll happily share links to forks here.
+>
+> A huge thank you to all contributors along the way ❤️
+
+---
+
 ## Setup
 
 ### 1) Setup regular Airbnb config
