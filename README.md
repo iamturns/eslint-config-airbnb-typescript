@@ -4,16 +4,26 @@
 
 Enhances Airbnb's ESLint config with TypeScript support
 
-> [!IMPORTANT]
-> ## This repo has been archived
->
-> After six years and reaching 2 million weekly downloads, I can no longer give this project the attention it deserves.
-> 
-> Please fork this repo and carry it forward! I'll happily share links to forks here.
->
-> A huge thank you to all contributors along the way ❤️
+---
+
+### 👋 This repo has been archived
+
+After six years and reaching 2 million weekly downloads, I can no longer give this project the attention it deserves.
+
+A huge thank you to all contributors along the way ❤️
+
+### 🔀 Alternatives
+ 
+- [`eslint-config-airbnb-extended`](https://www.npmjs.com/package/eslint-config-airbnb-extended)
+
+These are not personal recommendations. Just sharing for discoverability. Know other alternatives? [Email me](mailto:matt@iamturns.com).
 
 ---
+
+---
+
+---
+
 
 ## Setup
 
